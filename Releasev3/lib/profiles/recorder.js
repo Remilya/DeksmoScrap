@@ -6,7 +6,7 @@ var KellyProfileRecorder = new Object();
         KellyProfileRecorder.self = new KellyProfileDefault();   
         var handler = KellyProfileRecorder.self;
         
-        handler.profile = 'recorder';    
+        handler.profile = 'Deksmo';    
         handler.extLinks = {
         
             pp : 'https://github.com/Remilya/DeksmoScrap',

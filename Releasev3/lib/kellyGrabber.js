@@ -796,6 +796,79 @@ function KellyGrabber(cfg) {
 
         logBtn.style.display = 'none';
         
+        // Deksmo Export buttons - PDF and ZIP
+        // Redirects to PDF Manager with current queue
+        
+        function sendToPdfManager(type) {
+            if (!downloads || downloads.length === 0) {
+                alert('No images found in queue');
+                return false;
+            }
+            
+            // Prepare image data for export
+            var images = [];
+            for (var i = 0; i < downloads.length; i++) {
+                var d = downloads[i];
+                // Try to find a valid URL
+                var url = d.url;
+                if (!url && d.item) {
+                     // Fallback to item properties if download hasn't started
+                     // pImage[subItem] might be needed if it's a multi-image item
+                     if (d.subItem !== false && d.item.pImage && d.item.pImage[d.subItem]) {
+                         url = d.item.pImage[d.subItem].url || d.item.pImage[d.subItem].src;
+                     } else {
+                         url = d.item.url || d.item.src;
+                     }
+                }
+                
+                if (url) {
+                    images.push({
+                        src: url,
+                        filename: d.filename || d.name || 'image_' + (i + 1)
+                    });
+                }
+            }
+            
+            if (images.length === 0) {
+                alert('Could not extract image URLs. Please try starting the download first.');
+                return false;
+            }
+            
+            var title = options.baseFolder || 'Export';
+            
+            // Save to storage and open manager
+            var importData = {
+                title: title,
+                images: images,
+                autoStart: type // 'pdf' or 'zip' or null
+            };
+            
+            chrome.storage.local.set({ 'deksmo_pdf_import': importData }, function() {
+                 KellyTools.getBrowser().tabs.create({
+                    url: chrome.runtime.getURL('env/html/pdf_manager.html')
+                });
+            });
+            
+            return false;
+        }
+
+        handler.addControllEl('export_pdf', 'Export PDF', function() {
+            return sendToPdfManager('pdf'); // Auto-start PDF export dialog in manager? Or just open it. User said "mess with pdfs". I'll just open it.
+            // keeping 'pdf' tag in case we want to highlight it
+        });
+        
+        handler.addControllEl('export_zip', 'Export ZIP', function() {
+             return sendToPdfManager('zip');
+        });
+        
+        // Open PDF Manager Interface
+        handler.addControllEl('open_pdf_manager', 'OPEN PDF MANAGER', function() {
+            KellyTools.getBrowser().tabs.create({
+                url: chrome.runtime.getURL('env/html/pdf_manager.html')
+            });
+            return false;
+        });
+        
         handler.updateStartButtonState('start');
         updateProgressBar();     
         onSideBarBoundsUpdate('showGrabManager');

@@ -1,0 +1,6 @@
+
+{
+  "name": "Deksmo",
+  "description": "A high-performance manga-to-PDF converter that preserves image quality and organizes chapters from folders into clean PDF files.",
+  "requestFramePermissions": []
+}
