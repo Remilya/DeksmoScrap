@@ -293,14 +293,14 @@
     "ext_description":{  
         "message":"Каталогизатор, грабер картинок из публикаций и комментов для JoyReactor"
     },        
-    "ext_name":{  
-        "message":"KellyC Favorites"
+    "ext_name":{
+        "message":"Deksmo Favorites"
     },  
-    "ext_name_recorder":{  
-        "message":"KellyC Image Downloader"
+    "ext_name_recorder":{
+        "message":"Deksmo WebGrab"
     }, 
-    "ext_description_recorder":{  
-        "message":"Расширения для скачивания картинок с Pinterest, Pixiv и других сайтов"
+    "ext_description_recorder":{
+        "message":"Модуль экосистемы Deksmo для пакетного скачивания изображений"
     },
     "expand":{  
         "message":"Развернуть"

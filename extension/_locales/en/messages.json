@@ -293,14 +293,14 @@
     "ext_description":{  
         "message":"Save favorite publications and comments to local browser storage. "
     },
-    "ext_name":{  
-        "message":"KellyC Favorites"
+    "ext_name":{
+        "message":"Deksmo Favorites"
     },    
-    "ext_name_recorder":{  
-        "message":"KellyC Image Downloader"
+    "ext_name_recorder":{
+        "message":"Deksmo WebGrab"
     },
-    "ext_description_recorder":{  
-        "message":"Extension for batch download images from Pinterest, Pixiv and other sites"
+    "ext_description_recorder":{
+        "message":"A Deksmo Ecosystem module for batch downloading images from web sources"
     },
     "expand":{  
         "message":"Expand"

@@ -1,0 +1,53 @@
+/* css for display extension as separate page */
+/* mobile version */
+
+
+.__BASECLASS__-mobile #sidebar {
+    display : none;
+}
+
+
+@media (max-width: 1040px) {
+    .__BASECLASS__-mobile .page-content {
+        padding: 4px;
+    }
+    
+    .__BASECLASS__-mobile #submenu {
+        padding: 30px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+} 
+
+@media (max-width: 1000px) {
+    
+    .__BASECLASS__-mobile .__BASECLASS__-additions-additions_menu {
+        float : none;
+        width : 100%;
+        padding-top: 6px;
+    }
+    
+    .__BASECLASS__-mobile .__BASECLASS__-additions-pages{
+        float : none;
+        width : 100%;
+    }
+    
+    .__BASECLASS__-mobile .__BASECLASS__-active.__BASECLASS__-additions-page-item ul {
+        margin: 0px;
+        padding: 0px;
+        margin-left: 0;
+        margin-top : 12px;
+    }   
+
+    .__BASECLASS__-mobile .__BASECLASS__-additions-additions_menu ul li.__BASECLASS__-additions-menu-item-li {
+        margin-right: 0;
+    }
+}  
+
+@media (max-width: 590px) {
+    
+    .__BASECLASS__-mobile #submenu {
+        padding-left: 0;
+        padding-right: 0;
+    }  
+}
