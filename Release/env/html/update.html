@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+        
+        <title>Deksmo WebGrab</title>
+        
+        <style>
+        
+            html, body {
+                background: #0F172A;
+                color: #F8FAFC;
+                margin : 0;
+                padding : 0;  
+                width: 100%;
+                height: 100%;  
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 14px;
+                line-height: 22px;
+                font-weight: 400;
+            }
+            
+            body {
+                padding-top: 20px;
+                overflow-y : scroll;
+            }
+            
+            * {
+                box-sizing: border-box;
+            }   
+
+            a {
+                color : #00B4D8;
+            }
+            
+            p {
+                margin: 9px 0;
+            }
+            
+            .notice-wrap {
+        
+                width: 80%;
+                background-size: cover;
+                color: #F8FAFC;
+                font-size: 16px;
+                margin: 0 auto;
+                padding-bottom : 24px;
+            }
+            
+            .notice-header {
+                height: 55px;
+                background: #03045E;
+                width: 100%;
+                left: 0;
+                top: 0;
+                z-index: 1;
+                border-radius: 8px 8px 0px 0px;
+                padding-top: 16px;
+                padding-left: 29px;
+                color: #00B4D8;
+            }
+            
+            .notice {
+                margin: 0 auto;
+                min-height: 80%;
+                padding: 23px;
+                font-size: 16px;
+                color: #F8FAFC;
+                border-radius: 2px;
+                position: relative;
+                padding-top: 7px;
+                background: #1E293B;
+                border-radius: 0 0 8px 8px;
+            }
+
+            .footer {
+                text-align: center;
+                margin-top: 30px;
+                padding: 20px;
+                color: #94A3B8;
+                font-size: 12px;
+            }
+
+            .footer a {
+                color: #00B4D8;
+            }
+            
+            @media (max-width: 800px) {
+            
+                body {
+                    padding-top : 0;
+                }
+                
+                .notice-wrap {
+                    width: 100%;
+                }
+                
+                .notice-header {
+                    height: unset;
+                    padding: 18px;
+                }
+            }
+        </style>
+        
+    </head>
+
+    <body>
+          
+        <div class="notice-wrap notice-en" style="display : block;">
+        
+            <div class="notice-header">
+                <b>Deksmo WebGrab</b> <span class="updates"></span><b class="version">v1.2.9.6</b>            
+            </div>
+            
+            <div class="notice">
+            
+                <br><b style="color: #00B4D8;">Welcome to Deksmo WebGrab!</b>
+                <br><br>
+                
+                A Deksmo Ecosystem module for batch downloading images from web sources.
+                
+                <br><br>
+                
+                <b>Features:</b>
+                <ul>
+                    <li>Batch download images from any website</li>
+                    <li>Filter by size, resolution, and format</li>
+                    <li>Extended support for Pixiv, Twitter, Pinterest, and more</li>
+                </ul>
+                
+                <br>
+                
+                <b>Links:</b>
+                <ul>
+                    <li><a href="https://Deksmo.com" target="_blank">Deksmo.com</a> - Main Website</li>
+                    <li><a href="https://github.com/Remilya/DeksmoScrap" target="_blank">GitHub Repository</a> - Source Code & Issues</li>
+                </ul>
+                
+                <br>
+            </div>
+        
+        </div>     
+         
+        <div class="notice-wrap notice-ru" style="display : none;">
+        
+            <div class="notice-header">
+                <b>Deksmo WebGrab</b> <span class="updates"></span><b class="version">v1.2.9.6</b>            
+            </div>
+            
+            <div class="notice">
+                  
+                <br><b style="color: #00B4D8;">Добро пожаловать в Deksmo WebGrab!</b>
+                <br><br>
+                
+                Модуль экосистемы Deksmo для пакетного скачивания изображений.
+                
+                <br><br>
+                
+                <b>Возможности:</b>
+                <ul>
+                    <li>Пакетное скачивание изображений с любого сайта</li>
+                    <li>Фильтрация по размеру, разрешению и формату</li>
+                    <li>Расширенная поддержка Pixiv, Twitter, Pinterest и других</li>
+                </ul>
+                
+                <br>
+                
+                <b>Ссылки:</b>
+                <ul>
+                    <li><a href="https://Deksmo.com" target="_blank">Deksmo.com</a> - Основной сайт</li>
+                    <li><a href="https://github.com/Remilya/DeksmoScrap" target="_blank">GitHub</a> - Исходный код</li>
+                </ul>
+                
+                <br>
+            </div>
+        
+        </div>     
+    
+        <div class="footer">
+            <b>Powered by Deksmo Engine</b><br>
+            <i>Preserving the art of manga, one folder at a time.</i><br>
+            © 2026 Remilya Deksmo ™<br><br>
+            <a href="https://Deksmo.com" target="_blank">Deksmo.com</a> | 
+            <a href="https://github.com/Remilya/DeksmoScrap" target="_blank">GitHub</a>
+        </div>
+    
+        <script src="../../lib/kellyTools.js"></script>
+        <script src="../../lib/kellyCAbout.js"></script>
+        <script>
+            // Simple language detection
+            var lang = navigator.language || navigator.userLanguage;
+            if (lang && lang.indexOf('ru') === 0) {
+                document.querySelector('.notice-en').style.display = 'none';
+                document.querySelector('.notice-ru').style.display = 'block';
+            }
+        </script>
+        
+    </body>
+
+</html> 

@@ -1,0 +1,1 @@
+Documentation available on <a href="https://kdl.catface.ru/links/dev/">official extension page</a>
